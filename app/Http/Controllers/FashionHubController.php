@@ -8,6 +8,6 @@ class FashionHubController extends Controller
 {
     public function index()
     {
-        return view('front.master');
+        return view('front.home.home');
     }
 }
