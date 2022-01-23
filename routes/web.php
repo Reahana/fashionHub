@@ -18,6 +18,21 @@ Route::get('/', [
     'as' => '/'
 ]);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/about-us', [
+    'uses' => 'App\Http\Controllers\FashionHubController@about',
+    'as' => 'about'
+]);
+
+Route::get('/blog', [
+    'uses' => 'App\Http\Controllers\FashionHubController@blog',
+    'as' => 'blog'
+]);
+
+
+Route::get('/dashboard', [
+    'uses' => 'App\Http\Controllers\DashboardController@index',
+    'as' => 'dashboard',
+    'middleware'=>['auth:sanctum', 'verified']
+]);
+
+
