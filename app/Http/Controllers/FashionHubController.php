@@ -10,4 +10,16 @@ class FashionHubController extends Controller
     {
         return view('front.home.home');
     }
+    public function about()
+    {
+        return view('front.about.about');
+    }
+    public function blog()
+    {
+        return view('front.blog.blog');
+    }
+    public function contact()
+    {
+        return view('front.contact.contact');
+    }
 }
